@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bearing Capacity Calculator</title>
+</head>
+<body>
+
+<h2>Bearing Capacity Calculator</h2>
+
+<form method="POST">
+    c: <input name="c" required><br><br>
+    gamma: <input name="gamma" required><br><br>
+    Df: <input name="Df" required><br><br>
+    B: <input name="B" required><br><br>
+    Nc: <input name="Nc" required><br><br>
+    Nq: <input name="Nq" required><br><br>
+    Ngamma: <input name="Ngamma" required><br><br>
+
+    <button type="submit">Calculate</button>
+</form>
+
+{% if results %}
+    <h3>Results:</h3>
+    <ul>
+        <li>Terzaghi: {{ results["Terzaghi"] }}</li>
+        <li>Meyerhof: {{ results["Meyerhof"] }}</li>
+        <li>Hansen: {{ results["Hansen"] }}</li>
+        <li>Vesic: {{ results["Vesic"] }}</li>
+    </ul>
+{% endif %}
+
+</body>
+</html>
